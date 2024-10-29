@@ -1,0 +1,13 @@
+name: action-test
+
+on: push
+
+jobs: 
+  actions-test-job:
+
+    runs-on: ubunti-latest
+
+    steps:
+      - name: check out repository code
+        uses: actions/checkout@v4
+      - run: echo "$(cat actions-test.txt)"
